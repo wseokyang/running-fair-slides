@@ -72,7 +72,8 @@ const { pathToFileURL } = require('node:url');
   for(const image of await page.locator('img').all()) assert(await image.evaluate(e=>e.complete&&e.naturalWidth>0),'image loaded');
  }
  await page.goto(url + '#slide=7&step=3');
- assert.match(await page.locator('.page-7').innerText(), /DS부문 Talent Development 우수사례 선정/);
+ assert.match(await page.locator('.page-7').innerText(), /실행을 성과로 만듭니다/);
+ assert.match(await page.locator('.page-8 .recognition-proof').textContent(), /끝까지 업무에 적용합니다/);
  assert.equal(await page.locator('.page-4 .knowledge-illustration img').getAttribute('src'), 'assets/knowledge-loop.png');
  assert.equal(await page.locator('.page-6 .ecosystem-illustration img').getAttribute('src'), 'assets/global-ecosystem.png');
  await page.goto(url + '#slide=2&step=3');
