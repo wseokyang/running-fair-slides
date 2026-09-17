@@ -71,6 +71,17 @@ const { pathToFileURL } = require('node:url');
   assert(await page.locator('.slide').evaluate(e=>e.scrollHeight===e.clientHeight),'slide overflow '+i);
   for(const image of await page.locator('img').all()) assert(await image.evaluate(e=>e.complete&&e.naturalWidth>0),'image loaded');
  }
+ await page.goto(url + '#slide=7&step=3');
+ assert.match(await page.locator('.page-7').innerText(), /DS부문 Talent Development 우수사례 선정/);
+ assert.equal(await page.locator('.page-4 .knowledge-illustration img').getAttribute('src'), 'assets/knowledge-loop.png');
+ assert.equal(await page.locator('.page-6 .ecosystem-illustration img').getAttribute('src'), 'assets/global-ecosystem.png');
+ await page.goto(url + '#slide=2&step=3');
+ await page.waitForTimeout(600);
+ assert(await page.locator('.page-2').evaluate(slide => {
+   const blocks = slide.querySelector('.system-pillars').getBoundingClientRect();
+   const message = slide.querySelector('.system-message').getBoundingClientRect();
+   return message.top >= blocks.bottom;
+ }), 'Slide 2 closing message must not overlap the three pillars');
  assert.deepEqual(errors,[]);
  await browser.close();console.log('PASS: all 8 slides, all reveal steps, fullscreen continuity, reverse navigation, key repeat, notes, blackout, refresh, 16:9 at three viewport sizes, images and standalone files.');
 })().catch(error=>{console.error(error);process.exitCode=1});
