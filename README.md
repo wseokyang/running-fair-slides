@@ -1,5 +1,13 @@
 # Learning Voyage
 
+## 파일 하나로 실행·공유
+
+**`Learning-Voyage.html` 한 파일만 복사해서 브라우저로 여세요.** 이미지·CSS·JavaScript·8개 슬라이드·발표 노트·내부 목차가 모두 포함되어 있습니다. assets 폴더나 다른 HTML은 필요 없고, 인터넷 없이 실행됩니다. 약 11MiB입니다. 전체 화면 시작을 한 번 누르면 클리커로 진행할 수 있습니다. ‘전체 보기’는 파일 내부 목차를 열며, 다른 파일로 이동하지 않습니다.
+
+원본 수정 후 `python3 scripts/build-standalone.py`를 실행하면 `present.html`과 `Learning-Voyage.html`이 함께 갱신됩니다. 원본 HTML·assets는 편집용으로 유지합니다.
+
+독립 실행 검증: `PLAYWRIGHT_MODULE=/path/to/@playwright/test node tests/standalone.cjs`. 파일 하나만 임시 폴더에 복사하고 네트워크를 끈 상태에서 모든 이미지와 발표 기능, 외부 요청 없음까지 검증합니다.
+
 ## 실제 발표
 
 `index.html`에서 **클리커 발표 시작**을 선택하거나 `present.html`을 직접 여세요. **전체 화면 시작**을 한 번 누른 뒤에는 클리커의 앞/뒤 버튼만으로 진행할 수 있습니다. 외부 서버·인터넷·빌드 설치가 필요 없습니다. 배포 시 HTML과 assets 폴더를 함께 전달하세요.
