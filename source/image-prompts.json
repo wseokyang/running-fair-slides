@@ -1,0 +1,13 @@
+{
+  "mode": "Built-in image_gen tool",
+  "assets": [
+    {
+      "file": "assets/voyage-hero.png",
+      "prompt": "Use case: stylized-concept. Asset type: premium 16:9 presentation hero visual for a corporate learning journey, white Apple-inspired editorial presentation. Create a refined photorealistic miniature sculpture of a single elegant sailboat with thin matte white ceramic sails and brushed silver hull sailing on an almost white porcelain sea with exquisitely subtle ripples. One fine cobalt blue curved navigation trail crosses the water from lower left toward the boat and beyond toward the far upper right. High-key white studio lighting, believable soft contact shadows, museum-grade product photography, restrained blue and silver palette. Wide panoramic composition, entire boat fully visible in the RIGHT HALF with a generous margin at the right edge; LEFT 45 percent almost empty pure white negative space for separate HTML typography. Slightly elevated three-quarter camera angle, precise sophisticated geometry, no cartoon style, no people, no text, no letters, no numbers, no logos, no watermark. Background and all edges must fade naturally to pure white, no horizon line, no dark region. The boat represents a quality team moving toward future capability."
+    },
+    {
+      "file": "assets/voyage-fleet.png",
+      "prompt": "Use case: stylized-concept. Asset type: closing hero image for a premium white 16:9 corporate presentation titled Learning Voyage, text added separately in HTML. Create a sophisticated high-key studio photorealistic scene of THREE finely crafted sailboat miniatures with matte white ceramic sails and brushed silver hulls. They follow a single fine cobalt-blue curved navigation trail on an almost white porcelain ocean with subtle realistic ripples. Large leading boat toward upper right, two progressively smaller following boats toward lower center, leaving LEFT 42 percent and upper-left clean pure white negative space for heading overlay. Boats fully visible and not cropped. Slight elevated three-quarter camera. Gallery-grade product photography, restrained silver white and single blue accent, soft daylight and delicate contact shadows, refined rigging. White background blending seamlessly into all image edges. The idea is an established learning route that other teams can follow. No text, no logos, no people, no watermark, no dark background, no cartoon, no horizon line. Wide landscape 16:9."
+    }
+  ]
+}
